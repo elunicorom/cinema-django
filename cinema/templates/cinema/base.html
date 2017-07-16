@@ -35,40 +35,61 @@
   {% block body %}
   <br>
   <br>
-  <br>
+  <br><br><br><br>
       <div class="w3-row-padding w3-margin-top cartas")>
-        <div class="w3-quarter w3-margin-bottom">
-          <div class="w3-card-4 w3-center w3-margin-top">
-              <img src="{% static 'imagenes/usuario.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card-4 w3-center w3-margin-top">
+                <div class="w3-container">
+                  <div class="w3-tooltip">
+                    <img src="{% static 'imagenes/usuario.png' %}" class="w3-circle w3-margin-top" style="width:50%"><br>
+                      <h3>RR.HH</h3>
+                      <p class="w3-text"><span class="icon-checkmark"></span>Personal</p><br>
+                      <p class="w3-text"><span class="icon-checkmark"></span>Administrativos</p>
+                  </div>
+                  <a href="" class="w3-button w3-medium w3-grey">IR</a>
+                </div><br>
+            </div>
+          </div>
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card-4 w3-center w3-margin-top">
               <div class="w3-container">
-                  <h2>RR.HH</h2>
-              </div>
-          </div>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-          <div class="w3-card-4 w3-center w3-margin-top">
-            <img src="{% static 'imagenes/salas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
-            <div class="w3-container">
-                <h2>SALAS</h2>
+                <div class="w3-tooltip">
+                  <img src="{% static 'imagenes/salas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+                  <h3>SALAS</h3>
+                  <p class="w3-text"><span class="icon-checkmark"></span>3D</p><br>
+                  <p class="w3-text"><span class="icon-checkmark"></span>2D</p>
+                </div>
+                <a href="" class="w3-button w3-medium w3-grey">IR</a>
+              </div><br>
+
             </div>
           </div>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-          <div class="w3-card-4 w3-center w3-margin-top">
-            <img src="{% static 'imagenes/areas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
-            <div class="w3-container">
-                <h2>AREAS</h2>
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card-4 w3-center w3-margin-top">
+              <div class="w3-container">
+                <div class="w3-tooltip">
+                  <img src="{% static 'imagenes/areas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+                  <h3>AREAS</h3>
+                  <p class="w3-text"><span class="icon-checkmark"></span>Dulceria</p><br>
+                  <p class="w3-text"><span class="icon-checkmark"></span>Servicio</p>
+                </div>
+                <a href="" class="w3-button w3-medium w3-grey">IR</a>
+              </div><br>
             </div>
           </div>
-        </div>
-        <div class="w3-quarter w3-margin-bottom">
-          <div class="w3-card-4 w3-center w3-margin-top">
-            <img src="{% static 'imagenes/pelicula.png' %}" class="w3-circle w3-margin-top" style="width:50%">
-            <div class="w3-container">
-                <h2>PELICULAS</h2>
+          <div class="w3-quarter w3-margin-bottom">
+            <div class="w3-card-4 w3-center w3-margin-top">
+              <div class="w3-container">
+                <div class="w3-tooltip">
+                  <img src="{% static 'imagenes/pelicula.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+                  <h3>PELICULAS</h3>
+                  <p class="w3-text"><span class="icon-checkmark"></span>3D</p><br>
+                  <p class="w3-text"><span class="icon-checkmark"></span>2D</p>
+                </div>
+                <a href="" class="w3-button w3-medium w3-grey">IR</a>
+              </div><br>
             </div>
           </div>
-        </div>
       </div>
   {% endblock %}
 
