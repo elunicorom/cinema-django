@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <title>{% block title %}Home{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts/style.css' %}">
+  <style>
+    .image{
+      background-image: url('{% static 'imagenes/fondo.jpg' %}');
+      min-height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  {% block navbar %}
+      <div class=" image w3-container w3-black w3-opacity-min w3-border-bottom w3-border-light-grey">
+          <div class="w3-bar">
+              <a href="{% url 'usuario:index' %}" class="w3-bar-item w3-button"><span class="icon-home"></span></a>
+              <a href="#" class="w3-bar-item w3-button w3-right"><span class=" icon-cogs"></span></a>
+              <a href="#" class="w3-bar-item w3-button w3-right"><span class=" icon-user" ></span></a>
+          </div>
+      </div>
+  {% endblock %}
+</head>
+<body class="image">
+  {% block body %}
+        
+  {% endblock %}
+
+</body>
+</html>

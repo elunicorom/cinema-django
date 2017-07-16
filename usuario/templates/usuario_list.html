@@ -1,0 +1,43 @@
+{% extends 'cinema/base.html' %}
+
+{% block title %} Lista de Usuarios{% endblock %}
+
+{% block body %}
+  <div class="w3-card-4">
+    <div class="w3-container">
+      <table class="w3-table w3-border w3-card-4 w3-indigo ">
+          <thead class="w3-border">
+            <tr>
+              <td class="w3-border ">#</td>
+              <td class="w3-border">Nombre</td>
+              <td class="w3-border">Apellido</td>
+              <td class="w3-border">Username</td>
+              <td class="w3-border">Dni</td>
+              <td class="w3-border">Email</td>
+              <td class="w3-border">Sexo</td>
+              <td class="w3-border">Tipo usuario</td>
+            </tr>
+          </thead>
+          <tbody>
+            {% if object_list %}
+        		{% for usuario in object_list %}
+              <tr>
+                <td class="w3-border w3-hover-brown">{{ usuario.id }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.nombre }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.apellido }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.username }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.dni }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.email }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.sexo }}</td>
+                <td class="w3-border w3-hover-brown">{{ usuario.tipo_usuario.id }}</td>
+              </tr>
+             {% endfor %}
+
+          	{% else %}
+          			<h1>No hay registro de usuarios</h1>
+          	{% endif %}
+          </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
