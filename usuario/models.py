@@ -14,3 +14,6 @@ class Usuario(models.Model):
     email = models.CharField(max_length=200)
     sexo = models.CharField(max_length=40)
     tipo_usuario = models.ForeignKey(Tipo_Usuario, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ["id"]

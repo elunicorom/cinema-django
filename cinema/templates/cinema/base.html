@@ -20,16 +20,20 @@
       max-height:1350px;
     }
   </style>
-  {% block navbar %}
+  <div class=" image w3-container w3-black w3-opacity-min w3-border-bottom w3-border-light-grey">
+      <div class="w3-bar">
+          <a href="{% url 'usuario:index' %}" class="w3-bar-item w3-button"><span class="icon-home"></span></a>
+          <a href="#" class="w3-bar-item w3-button w3-right"><span class=" icon-cogs"></span></a>
 
-      <div class=" image w3-container w3-black w3-opacity-min w3-border-bottom w3-border-light-grey">
-          <div class="w3-bar">
-              <a href="{% url 'usuario:index' %}" class="w3-bar-item w3-button"><span class="icon-home"></span></a>
-              <a href="#" class="w3-bar-item w3-button w3-right"><span class=" icon-cogs"></span></a>
-              <a href="#" class="w3-bar-item w3-button w3-right"><span class=" icon-user" ></span></a>
-          </div>
+          <a  href="{% block admin %}../admin/{% endblock %} "class="w3-bar-item w3-button w3-right"><span class=" icon-user" ></span></a>
+
+          <a href="{% url 'usuario:crear' %}" class="w3-bar-item w3-button"><span class="icon-user-plus"></span></a>
+          <a href="{% url 'usuario:listar' %}" class="w3-bar-item w3-button"><span class="icon-users"></span></a>
+          {% block navbar %}
+          {% endblock %}
       </div>
-  {% endblock %}
+  </div>
+
 </head>
 <body class="image">
   {% block body %}

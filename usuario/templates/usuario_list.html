@@ -1,7 +1,10 @@
 {% extends 'cinema/base.html' %}
 
 {% block title %} Lista de Usuarios{% endblock %}
+{% block admin %}../../admin/ {% endblock %}
+{% block navbar %}
 
+{% endblock %}
 {% block body %}
   <div class="w3-card-4">
     <div class="w3-container">
@@ -16,20 +19,25 @@
               <td class="w3-border">Email</td>
               <td class="w3-border">Sexo</td>
               <td class="w3-border">Tipo usuario</td>
+              <td class="w3-border">Accion</td>
             </tr>
           </thead>
           <tbody>
             {% if object_list %}
         		{% for usuario in object_list %}
               <tr>
-                <td class="w3-border w3-hover-brown">{{ usuario.id }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.nombre }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.apellido }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.username }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.dni }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.email }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.sexo }}</td>
-                <td class="w3-border w3-hover-brown">{{ usuario.tipo_usuario.id }}</td>
+                <td class="w3-border ">{{ usuario.id }}</td>
+                <td class="w3-border ">{{ usuario.nombre }}</td>
+                <td class="w3-border ">{{ usuario.apellido }}</td>
+                <td class="w3-border ">{{ usuario.username }}</td>
+                <td class="w3-border ">{{ usuario.dni }}</td>
+                <td class="w3-border ">{{ usuario.email }}</td>
+                <td class="w3-border ">{{ usuario.sexo }}</td>
+                <td class="w3-border ">{{ usuario.tipo_usuario.id }}</td>
+                <td class="w3-border">
+                  <a href="{% url 'usuario:editar' usuario.id %}" class="w3-btn w3-border  w3-hover-green w3-margin-left">Editar</a>
+                  <a href="{% url 'usuario:eliminar' usuario.id %}" class="w3-btn  w3-hover-green w3-border w3-margin-left">Eliminar</a>
+                </td>
               </tr>
              {% endfor %}
 
