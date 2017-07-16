@@ -15,8 +15,13 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    .cartas{
+      max-width: 1350px;
+      max-height:1350px;
+    }
   </style>
   {% block navbar %}
+
       <div class=" image w3-container w3-black w3-opacity-min w3-border-bottom w3-border-light-grey">
           <div class="w3-bar">
               <a href="{% url 'usuario:index' %}" class="w3-bar-item w3-button"><span class="icon-home"></span></a>
@@ -28,7 +33,43 @@
 </head>
 <body class="image">
   {% block body %}
-        
+  <br>
+  <br>
+  <br>
+      <div class="w3-row-padding w3-margin-top cartas")>
+        <div class="w3-quarter w3-margin-bottom">
+          <div class="w3-card-4 w3-center w3-margin-top">
+              <img src="{% static 'imagenes/usuario.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+              <div class="w3-container">
+                  <h2>RR.HH</h2>
+              </div>
+          </div>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+          <div class="w3-card-4 w3-center w3-margin-top">
+            <img src="{% static 'imagenes/salas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+            <div class="w3-container">
+                <h2>SALAS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+          <div class="w3-card-4 w3-center w3-margin-top">
+            <img src="{% static 'imagenes/areas.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+            <div class="w3-container">
+                <h2>AREAS</h2>
+            </div>
+          </div>
+        </div>
+        <div class="w3-quarter w3-margin-bottom">
+          <div class="w3-card-4 w3-center w3-margin-top">
+            <img src="{% static 'imagenes/pelicula.png' %}" class="w3-circle w3-margin-top" style="width:50%">
+            <div class="w3-container">
+                <h2>PELICULAS</h2>
+            </div>
+          </div>
+        </div>
+      </div>
   {% endblock %}
 
 </body>
