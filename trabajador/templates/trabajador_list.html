@@ -37,8 +37,8 @@
                 <td class="w3-border ">{{ trabajador.sexo }}</td>
                 <td class="w3-border ">{{ trabajador.tipo_usuario.id }}</td>
                 <td class="w3-border">
-                  <a href="{% url 'trabajador:editar' trabajador.id %}" class="w3-btn w3-border  w3-hover-green w3-margin-left">Editar</a>
-                  <a href="{% url 'trabajador:eliminar' trabajador.id %}" class="w3-btn  w3-hover-green w3-border w3-margin-left">Eliminar</a>
+                  <a href="{% url 'trabajador:editar' trabajador.id %}" class="w3-btn w3-hover-green w3-margin-left"><span class="icon-bin"></span></a>
+                  <a href="{% url 'trabajador:eliminar' trabajador.id %}" class="w3-btn  w3-hover-green w3-margin-left"><span class="icon-bin"></span></a>
                 </td>
               </tr>
              {% endfor %}
