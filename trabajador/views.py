@@ -28,5 +28,5 @@ class TrabajadorUpdate(UpdateView):
 
 class TrabajadorDelete(DeleteView):
     model = Trabajador
-    template_name = 'trabajdor_delete.html'
+    template_name = 'trabajador_delete.html'
     success_url = reverse_lazy('trabajador:listar')
