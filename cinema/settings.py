@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cinema',
     'tipo_usuario',
-    'usuario',
+    'trabajador',
 ]
 
 MIDDLEWARE = [

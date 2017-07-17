@@ -4,7 +4,7 @@
 <div class="w3-container">
   <form method="post">
     {% csrf_token %}
-    <h3>¿Desea eliminar el usuario {{ object.username }}?</h3>
+    <h3>¿Desea eliminar el trabajador {{ object.username }}?</h3>
     <button class="w3-button w3-border w3-green " name="button">Si,eliminar</button>
     <a href="{% url 'usuario:listar' %} " class="w3-button w3-border w3-green">Cancelar</a>
   </form>

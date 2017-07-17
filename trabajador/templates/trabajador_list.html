@@ -15,6 +15,7 @@
               <td class="w3-border">Nombre</td>
               <td class="w3-border">Apellido</td>
               <td class="w3-border">Username</td>
+              <td class="w3-border">Area</td>
               <td class="w3-border">Dni</td>
               <td class="w3-border">Email</td>
               <td class="w3-border">Sexo</td>
@@ -24,25 +25,26 @@
           </thead>
           <tbody>
             {% if object_list %}
-        		{% for usuario in object_list %}
+        		{% for trabajador in object_list %}
               <tr>
-                <td class="w3-border ">{{ usuario.id }}</td>
-                <td class="w3-border ">{{ usuario.nombre }}</td>
-                <td class="w3-border ">{{ usuario.apellido }}</td>
-                <td class="w3-border ">{{ usuario.username }}</td>
-                <td class="w3-border ">{{ usuario.dni }}</td>
-                <td class="w3-border ">{{ usuario.email }}</td>
-                <td class="w3-border ">{{ usuario.sexo }}</td>
-                <td class="w3-border ">{{ usuario.tipo_usuario.id }}</td>
+                <td class="w3-border ">{{ trabajador.id }}</td>
+                <td class="w3-border ">{{ trabajador.nombre }}</td>
+                <td class="w3-border ">{{ trabajador.apellido }}</td>
+                <td class="w3-border ">{{ trabajador.username }}</td>
+                <td class="w3-border">{{ trabajador.area }}</td>
+                <td class="w3-border ">{{ trabajador.dni }}</td>
+                <td class="w3-border ">{{ trabajador.email }}</td>
+                <td class="w3-border ">{{ trabajador.sexo }}</td>
+                <td class="w3-border ">{{ trabajador.tipo_usuario.id }}</td>
                 <td class="w3-border">
-                  <a href="{% url 'usuario:editar' usuario.id %}" class="w3-btn w3-border  w3-hover-green w3-margin-left">Editar</a>
-                  <a href="{% url 'usuario:eliminar' usuario.id %}" class="w3-btn  w3-hover-green w3-border w3-margin-left">Eliminar</a>
+                  <a href="{% url 'trabajador:editar' trabajador.id %}" class="w3-btn w3-border  w3-hover-green w3-margin-left">Editar</a>
+                  <a href="{% url 'trabajador:eliminar' trabajador.id %}" class="w3-btn  w3-hover-green w3-border w3-margin-left">Eliminar</a>
                 </td>
               </tr>
              {% endfor %}
 
           	{% else %}
-          			<h1>No hay registro de usuarios</h1>
+          			<h1>No hay registro de trabajadores</h1>
           	{% endif %}
           </tbody>
       </table>
