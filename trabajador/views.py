@@ -18,13 +18,13 @@ class TrabajadorCreate(CreateView):
     model = Trabajador
     form_class = TrabajadorForm
     template_name = 'trabajador_create.html'
-    success_url = reverse_lazy('usuario:listar')
+    success_url = reverse_lazy('trabajador:listar')
 
 class TrabajadorUpdate(UpdateView):
     model = Trabajador
     form_class = TrabajadorForm
     template_name = 'trabajador_update.html'
-    success_url = reverse_lazy('usuario:listar')
+    success_url = reverse_lazy('trabajador:listar')
 
 class TrabajadorDelete(DeleteView):
     model = Trabajador

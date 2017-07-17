@@ -4,7 +4,7 @@ from views import TrabajadorList,TrabajadorCreate,index,TrabajadorUpdate,Trabaja
 
 
 urlpatterns = [
-    url(r'^$',index, name='index'),
+    url(r'^index/',index, name='index'),
     url(r'^crear_trabajador/',TrabajadorCreate.as_view(), name='crear'),
     url(r'^listar_trabajador/',TrabajadorList.as_view(), name='listar'),
     url(r'^editar/(?P<pk>\d+)/$',TrabajadorUpdate.as_view(),name='editar'),
