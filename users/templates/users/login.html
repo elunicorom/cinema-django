@@ -1,0 +1,28 @@
+{% extends 'cinema/base.html' %}
+{% load staticfiles %}
+{% block body %}
+  <div class="w3-container w3-content ">
+    <br><br><br><br><br>
+    <div class="w3-content w3-card-4 w3-margin login">
+      <div class="w3-margin-left login">
+        <form action="post" class="w3-form w3-content login">
+          {% csrf_token %}
+          <div class="login">
+            <img class=" w3-circle w3-half w3-margin-left w3-margin-top" src="{% static 'imagenes/login.png' %}"  style="width:20%">
+          </div>
+          <div class="w3-container w3-margin">
+            <label><b>Username</b></label>
+            <div class="w3-container">
+              <input class="w3-input w3-animate-input w3-border w3-margin-bottom boton_login" type="text" placeholder="Enter Username" name="username" required>
+            </div>
+            <label><b>Password</b></label>
+            <div class="w3-container">
+              <input class="w3-input boton_login" type="text" placeholder="Enter Password" name="password" required>
+            </div><br>
+          </div>
+          <button class="w3-btn w3-section w3-margin-left boton_login" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
