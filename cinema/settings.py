@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tipo_usuario',
     'trabajador',
     'users',
+    'categoria_pelicula',
 ]
 
 MIDDLEWARE = [
